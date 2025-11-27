@@ -1,6 +1,6 @@
-**📚 BookTrack Library Management System**
+# **📚 BookTrack Library Management System**
  
-**📌 Description / Overview**
+# **📌 Description / Overview**
 BookTrack is a Java-based console application designed to simulate a full library management system. It provides core library functions such as adding users, adding books, searching, borrowing, returning, and reserving. The system tracks user borrowing limits, manages book availability, and automatically assigns reserved books to the next user in the queue once returned.
 
 This project demonstrates structured Object-Oriented Programming (OOP) in Java using inheritance, polymorphism, and custom exception handling. It also solves typical library workflow challenges—such as preventing over-borrowing, identifying valid borrowers, managing reservation queues, and keeping records organised—making it suitable for academic submissions or small-scale library simulations.
@@ -8,10 +8,10 @@ This project demonstrates structured Object-Oriented Programming (OOP) in Java u
 **🏷 OOP Concepts Applied**
 1. Encapsulation
 Encapsulation is applied by keeping the internal data of classes private and providing public methods to access or modify them.
--In the User class, attributes like name, userId, currentlyBorrowed, and maxBorrowLimit are private.
--Getter and setter methods (getName(), incrementBorrowed(), etc.) are provided to safely access or modify these attributes.
--Similarly, in the Book class, fields like title, author, isAvailable, and reservationQueue are private, ensuring controlled access to the book’s state.
--This prevents direct manipulation of critical data and maintains the integrity of the system.
+* -In the User class, attributes like name, userId, currentlyBorrowed, and maxBorrowLimit are private.
+* -Getter and setter methods (getName(), incrementBorrowed(), etc.) are provided to safely access or modify these attributes.
+* -Similarly, in the Book class, fields like title, author, isAvailable, and reservationQueue are private, ensuring controlled access to the book’s state.
+* -This prevents direct manipulation of critical data and maintains the integrity of the system.
 
 2. Inheritance
 Inheritance is used to create a hierarchical relationship between general and specialized classes:
