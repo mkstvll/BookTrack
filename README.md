@@ -8,9 +8,13 @@ This project demonstrates structured Object-Oriented Programming (OOP) in Java u
 **🏷 OOP Concepts Applied**
 1. Encapsulation
 Encapsulation is applied by keeping the internal data of classes private and providing public methods to access or modify them.
+
 -In the User class, attributes like name, userId, currentlyBorrowed, and maxBorrowLimit are private.
+
 -Getter and setter methods (getName(), incrementBorrowed(), etc.) are provided to safely access or modify these attributes.
+
 -Similarly, in the Book class, fields like title, author, isAvailable, and reservationQueue are private, ensuring controlled access to the book’s state.
+
 -This prevents direct manipulation of critical data and maintains the integrity of the system.
 
 2. Inheritance
