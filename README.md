@@ -125,6 +125,27 @@ Follow these steps to compile and run the **BookTrack** library management syste
 * Book searches are case-insensitive and allow partial title matches.
 * Reservations are automatically assigned when a returned book has pending reservations.
 
+# Sample output
+
+# Author and Acknowledgement
+## Ma. Kristel C. Estavillo
+BS Information Technology
+estakristel12@gmail.com
+
+I would like to express my sincere gratitude to the following individuals and resources for their invaluable contributions and support during the development of the BookTrack system:
+
+## Patrick Gabriel C. Boongaling
+BS Information Technology
+patrickgabrielboongaling@gmail.com
+
+I want to thank my dear groupmates for their time and effort in doing this project. For the contributions of us as individuals is very much appreciated to make this project successful. Also to our professor for guiding us in this project.
+
+## Elaine Grace F. Fanoga 
+BS Information Technology
+elainegracefanoga123@gmail.com
+
+I am thankful to my groupmates for their time and effort in completing the BookTrack System. I also appreciate the guidance of our professor, which made this project possible. Thank you to everyone who contributed.
+
 # 🌱 Future Enhancements
 This section outlines possible improvements or features that can be added to the BookTrack system in the future:
 * Implement a graphical user interface (GUI) for easier interaction instead of a console-based system.
