@@ -32,7 +32,13 @@ Abstraction hides the complex internal logic of classes and exposes only necessa
 * Methods like borrowBook(), returnBook(), and reserveBook() in the BookManager encapsulate the complex logic of borrowing, returning, and reserving books from the main program.
 * This allows the main program to interact with objects at a high level without worrying about internal details.
 
-### **5. Composition / Association**
+### **5. Exception Handling**
+* Custom exceptions enforce safe operations and maintain system integrity.
+* InvalidUserInputException prevents invalid user types from being added.
+* BookNotFoundException prevents operations on books that do not exist.
+* Exception handling works with encapsulation and abstraction to ensure only valid operations are performed.
+
+### **6. Composition / Association**
 Composition and association show how classes interact with each other:
 * UserManager contains multiple User objects.
 * BookManager contains multiple Book objects.
@@ -82,6 +88,48 @@ The BookTrack program is organized into several main classes, each with specific
 * BookTrack coordinates both UserManager and BookManager to provide the complete library system functionality.
 * Book can have a borrowerId which links to a User and a reservation queue linking to multiple User IDs.
 
+                            ┌───────────────────┐
+                            │       User        │
+                            ├───────────────────┤
+                            │ - name            │
+                            │ - userId          │
+                            │ - maxBorrowLimit  │
+                            │ - currentlyBorrowed │
+                            ├───────────────────┤
+                            │ + canBorrow()     │
+                            │ + getName()       │
+                            │ + incrementBorrowed() │
+                            │ + decrementBorrowed() │
+                            └─────────┬─────────┘
+                                      │
+                      ┌───────────────┴───────────────┐
+                      │               │               │
+               ┌──────────┐    ┌───────────┐    ┌────────┐
+               │ Student  │    │ Teacher   │    │ Guest  │
+               └──────────┘    └───────────┘    └────────┘
+                      │               │               │
+                      └───────────────┴───────────────┘
+                                      │
+                              ┌─────────────┐
+                              │ BookManager │
+                              ├─────────────┤
+                              │ - books[]   │
+                              │ - count     │
+                              └─────────────┘
+                                      │
+                              ┌─────────────┐
+                              │ Book        │
+                              ├─────────────┤
+                              │ - title     │
+                              │ - author    │
+                              │ - isAvailable │
+                              │ - borrowerId │
+                              │ - reservationQueue[] │
+                              └─────────────┘
+
+
+
+
 # **🖥️ How to Run the Program**
 Follow these steps to compile and run the **BookTrack** library management system in Java:
 
@@ -125,24 +173,36 @@ Follow these steps to compile and run the **BookTrack** library management syste
 * Book searches are case-insensitive and allow partial title matches.
 * Reservations are automatically assigned when a returned book has pending reservations.
 
-# Sample output
+# ♨️ Sample output
+<img width="317" height="299" alt="image" src="https://github.com/user-attachments/assets/00ffff95-65fb-40aa-a7fa-856dcd4780f7" />
+<img width="238" height="282" alt="image" src="https://github.com/user-attachments/assets/6aae9c24-bc0e-4eda-a5e8-8873cc719a96" />
+<img width="382" height="311" alt="image" src="https://github.com/user-attachments/assets/ce90eb5a-6c1b-47a8-b20c-53cd5fefaddf" />
+<img width="409" height="558" alt="image" src="https://github.com/user-attachments/assets/e3a693c8-5f0b-4462-9c3a-20db446c252a" />
+<img width="375" height="282" alt="image" src="https://github.com/user-attachments/assets/7212ca32-2b0a-45fb-b8ee-31b48ad5a4d6" />
+<img width="392" height="552" alt="image" src="https://github.com/user-attachments/assets/8dbd7dbc-d090-49a0-af50-0be0bb9b34a0" />
+<img width="552" height="297" alt="image" src="https://github.com/user-attachments/assets/1aeeba96-1c46-4bc1-b8dc-43956dcb946c" />
+<img width="613" height="601" alt="image" src="https://github.com/user-attachments/assets/5af2d661-ad4c-41a2-bb1b-4405625e3f89" />
+<img width="236" height="246" alt="image" src="https://github.com/user-attachments/assets/4a9080ae-af3e-4373-9b8e-5eeb644d2749" />
 
-# Author and Acknowledgement
+# 👩🏻‍💻 Author and Acknowledgement
 ## Ma. Kristel C. Estavillo
-BS Information Technology
-estakristel12@gmail.com
+* Manages users and books, implements OOP structure and logic
+* BS Information Technology
+* estakristel12@gmail.com
 
-I would like to express my sincere gratitude to the following individuals and resources for their invaluable contributions and support during the development of the BookTrack system:
+I want to thank my groupmates for their hard work, creativity, and collaboration throughout this project. Without all your support and dedication, it wouldn't have been possible to overcome challenges and complete the project successfully. I appreciate all the effort you've worked and all the ideas that you all contributed. I also want to thank our professor for giving us the opportunity to do this project, which allowed us to apply what we learned and expand our knowledge further.
 
 ## Patrick Gabriel C. Boongaling
-BS Information Technology
-patrickgabrielboongaling@gmail.com
+* Handles book inventory, borrowing rules, and reservation system
+* BS Information Technology
+* patrickgabrielboongaling@gmail.com
 
 I want to thank my dear groupmates for their time and effort in doing this project. For the contributions of us as individuals is very much appreciated to make this project successful. Also to our professor for guiding us in this project.
 
 ## Elaine Grace F. Fanoga 
-BS Information Technology
-elainegracefanoga123@gmail.com
+* Handles book inventory, borrowing rules, and reservation system
+* BS Information Technology
+* elainegracefanoga123@gmail.com
 
 I am thankful to my groupmates for their time and effort in completing the BookTrack System. I also appreciate the guidance of our professor, which made this project possible. Thank you to everyone who contributed.
 
