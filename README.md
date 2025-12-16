@@ -235,6 +235,6 @@ This section lists all the resources and materials used to develop the project:
 * TutorialsPoint – Java Programming Tutorial – https://www.tutorialspoint.com/java/index.htm
 * W3Schools – Java references and tutorials – https://www.w3schools.com/java/
 * GeeksforGeeks – Java programming examples and OOP concepts – https://www.geeksforgeeks.org/java/
-* Lecture Notes and Slides from our Information Technology course.
+* Lecture Notes and Slides from our Object-Oriented Programming course.
 * Visual Studio Code (VSCode) – IDE used for coding and testing the program.
 * YouTube Tutorials – Java programming tutorials for beginners and advanced users (various channels).
