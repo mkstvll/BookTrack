@@ -88,47 +88,44 @@ The BookTrack program is organized into several main classes, each with specific
 * BookTrack coordinates both UserManager and BookManager to provide the complete library system functionality.
 * Book can have a borrowerId which links to a User and a reservation queue linking to multiple User IDs.
 
-                            ┌───────────────────┐
-                            │       User        │
-                            ├───────────────────┤
-                            │ - name            │
-                            │ - userId          │
-                            │ - maxBorrowLimit  │
-                            │ - currentlyBorrowed │
-                            ├───────────────────┤
-                            │ + canBorrow()     │
-                            │ + getName()       │
+                            ┌───────────────────────┐
+                            │       User            │
+                            ├───────────────────────┤
+                            │ - name                │
+                            │ - userId              │
+                            │ - maxBorrowLimit      │
+                            │ - currentlyBorrowed   │
+                            ├───────────────────────┤
+                            │ + canBorrow()         │
+                            │ + getName()           │
                             │ + incrementBorrowed() │
                             │ + decrementBorrowed() │
-                            └─────────┬─────────┘
-                                      │
-                      ┌───────────────┴───────────────┐
-                      │               │               │
-               ┌──────────┐    ┌───────────┐    ┌────────┐
-               │ Student  │    │ Teacher   │    │ Guest  │
-               └──────────┘    └───────────┘    └────────┘
-                      │               │               │
-                      └───────────────┴───────────────┘
-                                      │
-                              ┌─────────────┐
-                              │ BookManager │
-                              ├─────────────┤
-                              │ - books[]   │
-                              │ - count     │
-                              └─────────────┘
-                                      │
-                              ┌─────────────┐
-                              │ Book        │
-                              ├─────────────┤
-                              │ - title     │
-                              │ - author    │
-                              │ - isAvailable │
-                              │ - borrowerId │
+                            └────────────┬──────────┘
+                                         │
+                         ┌───────────────┴───────────────┐
+                         │               │               │
+                   ┌──────────┐    ┌───────────┐    ┌────────┐
+                   │ Student  │    │ Teacher   │    │ Guest  │
+                   └──────────┘    └───────────┘    └────────┘
+                         │               │               │
+                         └───────────────┴───────────────┘
+                                         │
+                                 ┌─────────────┐
+                                 │ BookManager │
+                                 ├─────────────┤
+                                 │ - books[]   │
+                                 │ - count     │
+                                 └─────────────┘
+                                        │
+                              ┌──────────────────────┐
+                              │ Book                 │
+                              ├──────────────────────┤
+                              │ - title              │
+                              │ - author             │
+                              │ - isAvailable        │
+                              │ - borrowerId         │
                               │ - reservationQueue[] │
-                              └─────────────┘
-
-
-
+                              └──────────────────────┘
 
 # **🖥️ How to Run the Program**
 Follow these steps to compile and run the **BookTrack** library management system in Java:
@@ -174,15 +171,33 @@ Follow these steps to compile and run the **BookTrack** library management syste
 * Reservations are automatically assigned when a returned book has pending reservations.
 
 # ♨️ Sample output
+### 1. Add User
 <img width="317" height="299" alt="image" src="https://github.com/user-attachments/assets/00ffff95-65fb-40aa-a7fa-856dcd4780f7" />
+
+### 2. Add Book
 <img width="238" height="282" alt="image" src="https://github.com/user-attachments/assets/6aae9c24-bc0e-4eda-a5e8-8873cc719a96" />
+
+### 3. Search Book
 <img width="382" height="311" alt="image" src="https://github.com/user-attachments/assets/ce90eb5a-6c1b-47a8-b20c-53cd5fefaddf" />
+
+### 4. Borrow Book
 <img width="409" height="558" alt="image" src="https://github.com/user-attachments/assets/e3a693c8-5f0b-4462-9c3a-20db446c252a" />
+
+### 5. Return Book
 <img width="375" height="282" alt="image" src="https://github.com/user-attachments/assets/7212ca32-2b0a-45fb-b8ee-31b48ad5a4d6" />
+
+### 6. Reserve Book
 <img width="392" height="552" alt="image" src="https://github.com/user-attachments/assets/8dbd7dbc-d090-49a0-af50-0be0bb9b34a0" />
+
+### 7. View Users
 <img width="552" height="297" alt="image" src="https://github.com/user-attachments/assets/1aeeba96-1c46-4bc1-b8dc-43956dcb946c" />
+
+### 8. View Books
 <img width="613" height="601" alt="image" src="https://github.com/user-attachments/assets/5af2d661-ad4c-41a2-bb1b-4405625e3f89" />
-<img width="236" height="246" alt="image" src="https://github.com/user-attachments/assets/4a9080ae-af3e-4373-9b8e-5eeb644d2749" />
+
+### 9. Exit
+<img width="243" height="257" alt="image" src="https://github.com/user-attachments/assets/a13442ee-95ab-4c19-a8b3-d8fcff09079a" />
+
 
 # 👩🏻‍💻 Author and Acknowledgement
 ## Ma. Kristel C. Estavillo
@@ -193,7 +208,7 @@ Follow these steps to compile and run the **BookTrack** library management syste
 I want to thank my groupmates for their hard work, creativity, and collaboration throughout this project. Without all your support and dedication, it wouldn't have been possible to overcome challenges and complete the project successfully. I appreciate all the effort you've worked and all the ideas that you all contributed. I also want to thank our professor for giving us the opportunity to do this project, which allowed us to apply what we learned and expand our knowledge further.
 
 ## Patrick Gabriel C. Boongaling
-* Handles book inventory, borrowing rules, and reservation system
+* Develops main program, user interface, and exception handling.
 * BS Information Technology
 * patrickgabrielboongaling@gmail.com
 
@@ -216,7 +231,7 @@ This section outlines possible improvements or features that can be added to the
 * Expand the reservation system to notify users when a reserved book becomes available.
 
 # 🌐 References
-* This section lists all the resources and materials used to develop the project:
+This section lists all the resources and materials used to develop the project:
 * TutorialsPoint – Java Programming Tutorial – https://www.tutorialspoint.com/java/index.htm
 * W3Schools – Java references and tutorials – https://www.w3schools.com/java/
 * GeeksforGeeks – Java programming examples and OOP concepts – https://www.geeksforgeeks.org/java/
